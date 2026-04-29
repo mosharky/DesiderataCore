@@ -24,6 +24,10 @@ public class DataGenEvents {
         boolean server = event.includeServer();
         boolean client = event.includeClient();
 
+        // models
         generator.addProvider(event.includeClient(), new DCoreBlockStateProvider(output, existingFileHelper));
+        generator.addProvider(event.includeClient(), new DCoreItemModelProvider(output, existingFileHelper));
+        // lang
+        generator.addProvider(event.includeClient(), new DCoreLanguageProvider(output));
     }
 }
