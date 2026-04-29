@@ -1,0 +1,6 @@
+{
+  "parent": "nomansland:block/pebble/pebble_1",
+  "textures": {
+    "0": "desiderata:block/flint_pebbles"
+  }
+}

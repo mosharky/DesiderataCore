@@ -20,5 +20,10 @@ public class DataGenEvents {
         PackOutput output = generator.getPackOutput();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+
+        boolean server = event.includeServer();
+        boolean client = event.includeClient();
+
+        generator.addProvider(event.includeClient(), new DCoreBlockStateProvider(output, existingFileHelper));
     }
 }

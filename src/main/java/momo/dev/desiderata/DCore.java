@@ -1,5 +1,7 @@
 package momo.dev.desiderata;
 
+import momo.dev.desiderata.common.registry.DCoreBlocks;
+import momo.dev.desiderata.common.registry.DCoreItems;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 
@@ -16,6 +18,8 @@ public class DCore {
 
     public DCore(IEventBus bus, ModContainer container) {
         // NeoForge.EVENT_BUS.register(this);
+        DCoreBlocks.BLOCKS.register(bus);
+        DCoreItems.ITEMS.register(bus);
     }
 
     public static ResourceLocation loc(String path) {
