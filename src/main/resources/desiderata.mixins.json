@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "package": "momo.dev.desiderata.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "HangingHoaryAppleMixin",
+    "HangingWalnutsMixin",
+    "NMLSurfaceRulesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": false
+  }
+}
