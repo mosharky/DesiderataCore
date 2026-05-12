@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "desiderata:item/flint_pebbles"
+    "layer0": "yonder:item/flint_pebbles"
   }
 }

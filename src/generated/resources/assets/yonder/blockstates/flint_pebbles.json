@@ -2,37 +2,37 @@
   "variants": {
     "": [
       {
-        "model": "desiderata:block/flint_pebbles_1"
+        "model": "yonder:block/flint_pebbles_1"
       },
       {
-        "model": "desiderata:block/flint_pebbles_2"
+        "model": "yonder:block/flint_pebbles_2"
       },
       {
-        "model": "desiderata:block/flint_pebbles_3"
+        "model": "yonder:block/flint_pebbles_3"
       },
       {
-        "model": "desiderata:block/flint_pebbles_4"
+        "model": "yonder:block/flint_pebbles_4"
       },
       {
-        "model": "desiderata:block/flint_pebbles_5"
+        "model": "yonder:block/flint_pebbles_5"
       },
       {
-        "model": "desiderata:block/flint_pebbles_6"
+        "model": "yonder:block/flint_pebbles_6"
       },
       {
-        "model": "desiderata:block/flint_pebbles_7"
+        "model": "yonder:block/flint_pebbles_7"
       },
       {
-        "model": "desiderata:block/flint_pebbles_8"
+        "model": "yonder:block/flint_pebbles_8"
       },
       {
-        "model": "desiderata:block/flint_pebbles_9"
+        "model": "yonder:block/flint_pebbles_9"
       },
       {
-        "model": "desiderata:block/flint_pebbles_10"
+        "model": "yonder:block/flint_pebbles_10"
       },
       {
-        "model": "desiderata:block/flint_pebbles_11"
+        "model": "yonder:block/flint_pebbles_11"
       }
     ]
   }
