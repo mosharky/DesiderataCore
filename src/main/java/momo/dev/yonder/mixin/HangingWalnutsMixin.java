@@ -1,7 +1,7 @@
-package momo.dev.desiderata.mixin;
+package momo.dev.yonder.mixin;
 
 import com.mojang.serialization.MapCodec;
-import momo.dev.desiderata.common.registry.DCoreTags;
+import momo.dev.yonder.common.registry.YonderTags;
 import net.hecco.bountifulfares.definition.block.custom.HangingWalnutsBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -27,7 +27,7 @@ public class HangingWalnutsMixin extends FallingBlock {
     public void nameless$canSurvive(BlockState state, LevelReader world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(
                 Block.canSupportCenter(world, pos.above(), Direction.DOWN) && !world.isWaterAt(pos)
-                || world.getBlockState(pos.above()).is(DCoreTags.CanHangOn.WALNUT) && !world.isWaterAt(pos)
+                || world.getBlockState(pos.above()).is(YonderTags.CanHangOn.WALNUT) && !world.isWaterAt(pos)
         );
     }
 }

@@ -1,14 +1,13 @@
-package momo.dev.desiderata.common.datagen;
+package momo.dev.yonder.common.datagen;
 
-import momo.dev.desiderata.DCore;
-import momo.dev.desiderata.common.registry.DCoreBlocks;
+import momo.dev.yonder.Yonder;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-public class DCoreItemModelProvider extends ItemModelProvider {
-    public DCoreItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, DCore.MODID, existingFileHelper);
+public class YonderItemModelProvider extends ItemModelProvider {
+    public YonderItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, Yonder.MODID, existingFileHelper);
     }
 
     @Override

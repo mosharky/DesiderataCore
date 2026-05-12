@@ -1,7 +1,7 @@
-package momo.dev.desiderata;
+package momo.dev.yonder;
 
-import momo.dev.desiderata.common.registry.DCoreBlocks;
-import momo.dev.desiderata.common.registry.DCoreItems;
+import momo.dev.yonder.common.registry.YonderBlocks;
+import momo.dev.yonder.common.registry.YonderItems;
 import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 
@@ -11,15 +11,15 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
 
-@Mod(DCore.MODID)
-public class DCore {
-    public static final String MODID = "desiderata";
+@Mod(Yonder.MODID)
+public class Yonder {
+    public static final String MODID = "yonder";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public DCore(IEventBus bus, ModContainer container) {
+    public Yonder(IEventBus bus, ModContainer container) {
         // NeoForge.EVENT_BUS.register(this);
-        DCoreBlocks.BLOCKS.register(bus);
-        DCoreItems.ITEMS.register(bus);
+        YonderBlocks.BLOCKS.register(bus);
+        YonderItems.ITEMS.register(bus);
     }
 
     public static ResourceLocation loc(String path) {

@@ -1,19 +1,18 @@
 modLoader="javafml" #mandatory
 loaderVersion="${loader_version_range}" #mandatory
 license="${mod_license}"
-#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+issueTrackerURL="https://github.com/mosharky/YonderCore/issues/" #optional
 
 [[mods]] #mandatory
 modId="${mod_id}" #mandatory
 version="${mod_version}" #mandatory
 displayName="${mod_name}" #mandatory
-#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+displayURL="https://github.com/mosharky/YonderCore/" #optional
 #logoFile="examplemod.png" #optional
 #credits="" #optional
-authors="momo"
+authors="momo, Gareth"
 description='''
-A core mod for the Desiderata modpack.
+A core mod for the Yonder modpack.
 '''
 
 [[mixins]]
@@ -41,6 +40,13 @@ side="BOTH"
 
 [[dependencies.${mod_id}]]
 modId="nomansland"
+type="required"
+versionRange="[1,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.${mod_id}]]
+modId="bountifulfares"
 type="required"
 versionRange="[1,)"
 ordering="AFTER"

@@ -1,11 +1,10 @@
-package momo.dev.desiderata.common.registry;
+package momo.dev.yonder.common.registry;
 
 import com.farcr.nomansland.common.definitions.BlockDefinition;
 import com.farcr.nomansland.common.definitions.BlockProperties;
 import com.farcr.nomansland.common.registry.blocks.NMLBlocks;
-import com.farcr.nomansland.common.registry.items.NMLItems;
-import momo.dev.desiderata.DCore;
-import momo.dev.desiderata.common.block.StrikeablePickupBlock;
+import momo.dev.yonder.Yonder;
+import momo.dev.yonder.common.block.StrikeablePickupBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -20,10 +19,9 @@ import java.util.List;
 import java.util.function.Supplier;
 
 import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.of;
-import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy;
 
-public class DCoreBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(DCore.MODID);
+public class YonderBlocks {
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Yonder.MODID);
     public static List<BlockDefinition<?>> BLOCK_DEFINITIONS = new ArrayList<>();
 
     public static final BlockDefinition<StrikeablePickupBlock> FLINT_PEBBLES = register("flint_pebbles",
@@ -43,7 +41,7 @@ public class DCoreBlocks {
 
     public static <T extends Block> BlockDefinition<T> register(String name, Supplier<T> block, BlockProperties properties) {
         BlockDefinition<T> definition = registerNoItem(name, block, properties);
-        DCoreItems.register(name, () -> new BlockItem(definition.get(), new Item.Properties()));
+        YonderItems.register(name, () -> new BlockItem(definition.get(), new Item.Properties()));
         return definition;
     }
 

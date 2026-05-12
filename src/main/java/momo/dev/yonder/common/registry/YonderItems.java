@@ -1,8 +1,8 @@
-package momo.dev.desiderata.common.registry;
+package momo.dev.yonder.common.registry;
 
 import com.farcr.nomansland.common.definitions.ItemDefinition;
 import com.google.common.collect.Sets;
-import momo.dev.desiderata.DCore;
+import momo.dev.yonder.Yonder;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -12,8 +12,8 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.function.Supplier;
 
-public class DCoreItems {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(DCore.MODID);
+public class YonderItems {
+    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Yonder.MODID);
     public static List<ItemDefinition<?>> ITEM_DEFINITIONS = new ArrayList<>();
     public static LinkedHashSet<ItemDefinition<?>> CREATIVE_TAB_ITEMS = Sets.newLinkedHashSet();
 

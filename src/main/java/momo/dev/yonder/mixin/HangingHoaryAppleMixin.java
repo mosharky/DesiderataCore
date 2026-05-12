@@ -1,6 +1,6 @@
-package momo.dev.desiderata.mixin;
+package momo.dev.yonder.mixin;
 
-import momo.dev.desiderata.common.registry.DCoreTags;
+import momo.dev.yonder.common.registry.YonderTags;
 import net.hecco.bountifulfares.definition.block.custom.HangingFruitBlock;
 import net.hecco.bountifulfares.definition.block.custom.HangingHoaryAppleBlock;
 import net.minecraft.core.BlockPos;
@@ -22,7 +22,7 @@ public class HangingHoaryAppleMixin extends HangingFruitBlock {
     @Inject(method = "canSurvive", at = @At("RETURN"), cancellable = true)
     public void nameless$canSurvive(BlockState state, LevelReader world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(
-                (Block.canSupportCenter(world, pos.above(), Direction.DOWN) || world.getBlockState(pos.above()).is(DCoreTags.CanHangOn.HOARY_APPLE)) && !world.isWaterAt(pos)
+                (Block.canSupportCenter(world, pos.above(), Direction.DOWN) || world.getBlockState(pos.above()).is(YonderTags.CanHangOn.HOARY_APPLE)) && !world.isWaterAt(pos)
         );
     }
 }

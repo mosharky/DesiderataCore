@@ -1,8 +1,8 @@
-package momo.dev.desiderata.common.datagen;
+package momo.dev.yonder.common.datagen;
 
 import com.farcr.nomansland.NoMansLand;
 import com.farcr.nomansland.common.definitions.BlockDefinition;
-import momo.dev.desiderata.DCore;
+import momo.dev.yonder.Yonder;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -18,11 +18,11 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.function.Function;
 
-import static momo.dev.desiderata.common.registry.DCoreBlocks.*;
+import static momo.dev.yonder.common.registry.YonderBlocks.*;
 
-public class DCoreBlockStateProvider extends BlockStateProvider {
-    public DCoreBlockStateProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, DCore.MODID, existingFileHelper);
+public class YonderBlockStateProvider extends BlockStateProvider {
+    public YonderBlockStateProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, Yonder.MODID, existingFileHelper);
     }
 
     @Override protected void registerStatesAndModels() {

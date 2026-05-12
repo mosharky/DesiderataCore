@@ -1,4 +1,4 @@
-package momo.dev.desiderata.common.block;
+package momo.dev.yonder.common.block;
 
 import com.farcr.nomansland.common.block.GroundPickupBlock;
 import net.minecraft.core.BlockPos;

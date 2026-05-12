@@ -1,4 +1,4 @@
-package momo.dev.desiderata.mixin;
+package momo.dev.yonder.mixin;
 
 import com.farcr.nomansland.NoMansLand;
 import com.farcr.nomansland.common.registry.NMLTags;
