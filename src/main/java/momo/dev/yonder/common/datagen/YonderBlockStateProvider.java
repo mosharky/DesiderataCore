@@ -3,6 +3,7 @@ package momo.dev.yonder.common.datagen;
 import com.farcr.nomansland.NoMansLand;
 import com.farcr.nomansland.common.definitions.BlockDefinition;
 import momo.dev.yonder.Yonder;
+import momo.dev.yonder.common.registry.YonderBlocks;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -26,6 +27,7 @@ public class YonderBlockStateProvider extends BlockStateProvider {
     }
 
     @Override protected void registerStatesAndModels() {
+        // Flint Pebbles
         this.simpleBlockWithVariation(FLINT_PEBBLES.get(),
                 (i) -> {
                     int index = i + 1;
@@ -35,6 +37,9 @@ public class YonderBlockStateProvider extends BlockStateProvider {
                             .texture("0", modLoc(ModelProvider.BLOCK_FOLDER + "/" + name));
                 },11);
         this.flatBlockItem(FLINT_PEBBLES.get(), modLoc("item/flint_pebbles"));
+
+        // Dead Leaves
+        simpleBlockWithItem(DEAD_LEAVES.get(), models().leaves(name(DEAD_LEAVES), modLoc("block/dead_leaves")));
     }
 
 

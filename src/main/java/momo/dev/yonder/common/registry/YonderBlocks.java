@@ -5,10 +5,10 @@ import com.farcr.nomansland.common.definitions.BlockProperties;
 import com.farcr.nomansland.common.registry.blocks.NMLBlocks;
 import momo.dev.yonder.Yonder;
 import momo.dev.yonder.common.block.StrikeablePickupBlock;
+import momo.dev.yonder.common.registry.worldgen.YonderTreeGrowers;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.of;
+import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.ofFullCopy;
 
 public class YonderBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Yonder.MODID);
@@ -26,6 +27,11 @@ public class YonderBlocks {
 
     public static final BlockDefinition<StrikeablePickupBlock> FLINT_PEBBLES = register("flint_pebbles",
             () -> new StrikeablePickupBlock(() -> NMLBlocks.PEBBLES.stack(), of().mapColor(MapColor.STONE).noCollission().instabreak().sound(SoundType.STONE).pushReaction(PushReaction.DESTROY)));
+
+    public static final BlockDefinition<LeavesBlock> DEAD_LEAVES = register("dead_leaves",
+            () -> new LeavesBlock(ofFullCopy(Blocks.BIRCH_LEAVES).isViewBlocking((s, g, p) -> false).isSuffocating((s, g, p) -> false)));
+    // public static final BlockDefinition<SaplingBlock> DEAD_SAPLING = register("dead_sapling",
+    //         () -> new SaplingBlock(YonderTreeGrowers.DEAD, ofFullCopy(Blocks.OAK_SAPLING)));
 
     // Helpers (from NMLBlocks)
     public static <T extends Block> BlockDefinition<T> registerNoItem(String name, Supplier<T> block, BlockProperties properties) {

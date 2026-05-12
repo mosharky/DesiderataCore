@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "yonder:block/dead_leaves"
+    }
+  }
+}
