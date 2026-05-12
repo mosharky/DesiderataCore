@@ -1,33 +1,29 @@
-package momo.dev.yonder.mixin;
+package momo.dev.yonder.mixin.bountifulfares;
 
 import com.mojang.serialization.MapCodec;
 import momo.dev.yonder.common.registry.YonderTags;
 import net.hecco.bountifulfares.definition.block.custom.HangingWalnutsBlock;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(HangingWalnutsBlock.class)
-public class HangingWalnutsMixin extends FallingBlock {
-    public HangingWalnutsMixin(Properties properties) {
+public class HangingWalnutsBlockMixin extends FallingBlock {
+    public HangingWalnutsBlockMixin(Properties properties) {
         super(properties);
     }
 
-    @Overwrite protected MapCodec<? extends FallingBlock> codec() { return null; }
+    @Override protected MapCodec<? extends FallingBlock> codec() { return null; }
 
     @Inject(method = "canSurvive", at = @At("RETURN"), cancellable = true)
-    public void nameless$canSurvive(BlockState state, LevelReader world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
+    public void yonder$canSurvive(BlockState state, LevelReader world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(
-                Block.canSupportCenter(world, pos.above(), Direction.DOWN) && !world.isWaterAt(pos)
-                || world.getBlockState(pos.above()).is(YonderTags.CanHangOn.WALNUT) && !world.isWaterAt(pos)
+                world.getBlockState(pos.above()).is(YonderTags.Blocks.CanHangOn.WALNUT) && !world.isWaterAt(pos)
         );
     }
 }
