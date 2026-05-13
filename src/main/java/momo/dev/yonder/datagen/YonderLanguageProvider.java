@@ -1,4 +1,4 @@
-package momo.dev.yonder.common.datagen;
+package momo.dev.yonder.datagen;
 
 import com.farcr.nomansland.common.definitions.BlockDefinition;
 import com.farcr.nomansland.common.definitions.ItemDefinition;

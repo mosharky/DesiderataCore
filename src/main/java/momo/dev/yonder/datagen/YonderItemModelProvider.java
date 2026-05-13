@@ -1,4 +1,4 @@
-package momo.dev.yonder.common.datagen;
+package momo.dev.yonder.datagen;
 
 import momo.dev.yonder.Yonder;
 import net.minecraft.data.PackOutput;
