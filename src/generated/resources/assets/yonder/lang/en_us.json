@@ -1,4 +1,27 @@
 {
+  "block.yonder.aspen_leaves": "Aspen Leaves",
+  "block.yonder.aspen_log": "Aspen Log",
+  "block.yonder.aspen_sapling": "Aspen Sapling",
+  "block.yonder.aspen_wood": "Aspen Wood",
+  "block.yonder.birch_leaves": "Birch Leaves",
+  "block.yonder.birch_log": "Birch Log",
+  "block.yonder.birch_sapling": "Birch Sapling",
+  "block.yonder.birch_wood": "Birch Wood",
   "block.yonder.dead_leaves": "Dead Leaves",
-  "block.yonder.flint_pebbles": "Flint Pebbles"
+  "block.yonder.flint_pebbles": "Flint Pebbles",
+  "block.yonder.flowering_pear_leaves": "Flowering Pear Leaves",
+  "block.yonder.hanging_pear": "Hanging Pear",
+  "block.yonder.pear_leaves": "Pear Leaves",
+  "block.yonder.pear_log": "Pear Log",
+  "block.yonder.pear_sapling": "Pear Sapling",
+  "block.yonder.pear_wood": "Pear Wood",
+  "block.yonder.potted_aspen_sapling": "Potted Aspen Sapling",
+  "block.yonder.potted_birch_sapling": "Potted Birch Sapling",
+  "block.yonder.potted_pear_sapling": "Potted Pear Sapling",
+  "block.yonder.stripped_aspen_log": "Stripped Aspen Log",
+  "block.yonder.stripped_aspen_wood": "Stripped Aspen Wood",
+  "block.yonder.stripped_birch_log": "Stripped Birch Log",
+  "block.yonder.stripped_birch_wood": "Stripped Birch Wood",
+  "block.yonder.stripped_pear_log": "Stripped Pear Log",
+  "block.yonder.stripped_pear_wood": "Stripped Pear Wood"
 }

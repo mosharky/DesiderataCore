@@ -13,6 +13,7 @@ public class YonderTags {
     public static class Blocks {
         // For BountifulFares hanging fruits
         public static class CanHangOn {
+            // Bountiful Fares
             public static final TagKey<Block> APPLE = blockTag("can_hang_on/apple");
             public static final TagKey<Block> GOLDEN_APPLE = blockTag("can_hang_on/golden_apple");
             public static final TagKey<Block> HOARY_APPLE = blockTag("can_hang_on/hoary_apple");
@@ -21,6 +22,8 @@ public class YonderTags {
             public static final TagKey<Block> PLUM = blockTag("can_hang_on/plum");
             public static final TagKey<Block> WALNUT = blockTag("can_hang_on/walnut");
             public static final TagKey<Block> WITHERED_GOLDEN_APPLE = blockTag("can_hang_on/withered_golden_apple");
+            // Yonder
+            public static final TagKey<Block> PEAR = blockTag("can_hang_on/pear");
         }
     }
 
