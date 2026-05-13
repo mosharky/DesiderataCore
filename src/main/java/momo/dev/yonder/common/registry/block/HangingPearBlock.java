@@ -55,7 +55,7 @@ public class HangingPearBlock extends HangingFruitBlock {
 
     @Override
     public boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
-        return (world.getBlockState(pos.above()).is(YonderTags.Blocks.CanHangOn.PEAR)) && !world.isWaterAt(pos);
+        return (world.getBlockState(pos.above()).is(YonderTags.Blocks.CAN_HANG_ON.PEAR)) && !world.isWaterAt(pos);
     }
 
     @Override

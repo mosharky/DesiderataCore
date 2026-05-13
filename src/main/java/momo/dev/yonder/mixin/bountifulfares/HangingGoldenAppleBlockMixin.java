@@ -24,7 +24,7 @@ public class HangingGoldenAppleBlockMixin extends BushBlock {
     @Inject(method = "canSurvive", at = @At("RETURN"), cancellable = true)
     public void yonder$canSurvive(BlockState state, LevelReader world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         cir.setReturnValue(
-                world.getBlockState(pos.above()).is(YonderTags.Blocks.CanHangOn.GOLDEN_APPLE) && !world.isWaterAt(pos)
+                world.getBlockState(pos.above()).is(YonderTags.Blocks.CAN_HANG_ON.GOLDEN_APPLE) && !world.isWaterAt(pos)
         );
     }
 }

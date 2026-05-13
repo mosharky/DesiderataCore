@@ -1,11 +1,14 @@
 package momo.dev.yonder.datagen;
 
 import momo.dev.yonder.Yonder;
+import momo.dev.yonder.datagen.tags.YonderBlockTagsProvider;
+import momo.dev.yonder.datagen.tags.YonderItemTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
@@ -25,9 +28,12 @@ public class DataGenEvents {
         boolean client = event.includeClient();
 
         // models
-        generator.addProvider(event.includeClient(), new YonderBlockStateProvider(output, existingFileHelper));
-        generator.addProvider(event.includeClient(), new YonderItemModelProvider(output, existingFileHelper));
+        generator.addProvider(client, new YonderBlockStateProvider(output, existingFileHelper));
+        generator.addProvider(client, new YonderItemModelProvider(output, existingFileHelper));
         // lang
-        generator.addProvider(event.includeClient(), new YonderLanguageProvider(output));
+        generator.addProvider(client, new YonderLanguageProvider(output));
+        // tags
+        BlockTagsProvider blockTagsProvider = generator.addProvider(server, new YonderBlockTagsProvider(output, lookupProvider, existingFileHelper));
+        generator.addProvider(server, new YonderItemTagsProvider(output, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
     }
 }
